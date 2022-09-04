@@ -1,3 +1,23 @@
 <div class="wrapper">
-    <h1>Hello, friend!</h1>
+    <div class="table">
+        <div class="heading">Name</div>
+        <div class="heading">Angular Support</div>
+        <div class="heading">Documents</div>
+        <div class="heading">Customizable Nodes</div>
+        <div class="heading">Customizable Edges</div>
+        <div class="heading">Animation</div>
+        <div class="heading">UI</div>
+
+        <ng-container *ngFor="let row of rows">
+            <div>
+                <a [href]="row.url">{{ row.name }}</a>
+            </div>
+            <div [class]="row.angularSupport">{{ row.angularSupport }}</div>
+            <div [class]="row.documents">{{ row.documents }}</div>
+            <div [class]="row.customizableNodes">{{ row.customizableNodes }}</div>
+            <div [class]="row.customizableEdges">{{ row.customizableEdges }}</div>
+            <div [class]="row.animation">{{ row.animation }}</div>
+            <div [class]="row.ui">{{ row.ui }}</div>
+        </ng-container>
+    </div>
 </div>

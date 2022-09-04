@@ -1,0 +1,45 @@
+.wrapper {
+    .table {
+        --border: 0.1px solid var(--color-gray-80);
+
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, auto));
+
+        border-block-start: var(--border);
+        border-inline-start: var(--border);
+
+        > div {
+            padding: 1rem;
+
+            border-block-end: var(--border);
+            border-inline-end: var(--border);
+
+            text-align: center;
+
+            a {
+                color: var(--color--primary);
+
+                text-decoration: underline;
+            }
+
+            &.heading {
+                font-weight: 700;
+            }
+
+            &.good {
+                background-color: var(--color--success-fade);
+                color: var(--color--success);
+            }
+
+            &.ok {
+                background-color: var(--color--warning-fade);
+                color: var(--color--warning);
+            }
+
+            &.bad {
+                background-color: var(--color--danger-fade);
+                color: var(--color--danger);
+            }
+        }
+    }
+}

@@ -1,8 +1,12 @@
 <div class="wrapper">
-    <div class="table">
+    <div class="table" style="--columns-count: 11">
         <div class="heading">Name</div>
+        <div class="heading">Is Free?</div>
         <div class="heading">Angular Support</div>
         <div class="heading">Documents</div>
+        <div class="heading">Community</div>
+        <div class="heading">Easy to Use?</div>
+        <div class="heading">Event Handing</div>
         <div class="heading">Customizable Nodes</div>
         <div class="heading">Customizable Edges</div>
         <div class="heading">Animation</div>
@@ -10,14 +14,40 @@
 
         <ng-container *ngFor="let row of rows">
             <div>
-                <a [href]="row.url">{{ row.name }}</a>
+                <a [href]="row.url" target="_blank">{{ row.name }}</a>
             </div>
+            <div [class]="row.isFree">{{ row.isFree }}</div>
             <div [class]="row.angularSupport">{{ row.angularSupport }}</div>
             <div [class]="row.documents">{{ row.documents }}</div>
+            <div [class]="row.community">{{ row.community }}</div>
+            <div [class]="row.easyToUse">{{ row.easyToUse }}</div>
+            <div [class]="row.eventHanding">{{ row.eventHanding }}</div>
             <div [class]="row.customizableNodes">{{ row.customizableNodes }}</div>
             <div [class]="row.customizableEdges">{{ row.customizableEdges }}</div>
             <div [class]="row.animation">{{ row.animation }}</div>
             <div [class]="row.ui">{{ row.ui }}</div>
         </ng-container>
+
+        <div>
+            <a href="https://www.totaljs.com/">Total.js</a>
+        </div>
+        <div class="fill">it's an app, not a package</div>
+
+        <div>
+            <a href="https://reactflow.dev/">React Flow</a>
+        </div>
+        <div class="fill">only supported in react</div>
+
+        <div>
+            <a href="https://www.yworks.com/">yWorks</a>
+        </div>
+        <div class="fill">it's an app, not a package</div>
+
+        <div>
+            <a href="https://developers.google.com/chart/interactive/docs/gallery/orgchart/">
+                Google Organization Chart
+            </a>
+        </div>
+        <div class="fill">it's an organization chart designer, not a flow designer</div>
     </div>
 </div>
